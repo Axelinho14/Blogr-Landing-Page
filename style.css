@@ -1,0 +1,1060 @@
+:root{
+    /* ### Primary */
+
+    --Light-red: hsl(356, 100%, 66%); /*(CTA text)*/
+    --Very-light-red: hsl(355, 100%, 74%); /*(CTA hover background)*/
+    --Very-dark-blue: hsl(208, 49%, 24%); /*(headings)*/
+
+    /*### Neutral */
+
+    --White: hsl(0, 0%, 100%); /*(text)*/
+    --Grayish-blue: hsl(240, 2%, 79%); /*(footer text)*/
+    --Very-dark-grayish-blue: hsl(207, 13%, 34%); /*(body copy)*/
+    --Very-dark-black-blue: hsl(240, 10%, 16%); /*(footer background)*/
+
+    /* ### Gradient */
+
+    /* Background gradient - Intro/CTA mobile nav: */
+
+    --Very-light-red: hsl(13, 100%, 72%);
+    --Light-red: hsl(353, 100%, 62%);
+
+    /* Background gradient - body: */
+
+    --Very-dark-gray-blue: hsl(237, 17%, 21%);
+    --Very-dark-desaturated-blue: hsl(237, 23%, 32%);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: hsl(0, 0%, 98%);
+}
+.header-container{
+    background: url(image/bg-pattern-intro-desktop.svg) -5cm -35cm, linear-gradient(0.25turn,hsl(13, 100%, 72%),hsl(353, 100%, 62%));
+    height: 15cm;
+    border-bottom-left-radius: 2cm;
+}
+.header-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.menu-bar{
+    display: flex;
+    flex-direction: row;
+    margin-left: 6cm;
+    margin-top: 1cm;
+    color: var(--White);
+    font-family: Ubuntu;
+    font-weight: 500;
+}
+#product{
+    display: inline-block;
+    margin-left: 1.5cm;
+    margin-top: 0.3cm;
+    transition: 0.3s;
+}
+#product::after{
+    content: '';
+    width: 0cm;
+    height: 2px;
+    display: block;
+    background: white;
+    transition: 300ms;
+}
+#arrow-product{
+    margin-left: 0.2cm;
+    transition: 0.3s;
+}
+#company{
+    margin-left: 1.3cm;
+    margin-top: 0.3cm;
+    transition: 0.3s;
+}
+#company::after{
+    content: '';
+    width: 0cm;
+    height: 2px;
+    display: block;
+    background: white;
+    transition: 300ms;
+}
+#arrow-company{
+    margin-left: 0.2cm;
+    transition: 0.3s;
+}
+#connect{
+    margin-left: 1.3cm;
+    margin-top: 0.3cm;
+    transition: 0.3s;
+}
+#connect::after{
+    content: '';
+    width: 0cm;
+    height: 2px;
+    display: block;
+    background: white;
+    transition: 300ms;
+}
+#arrow-connect{
+    margin-left: 0.2cm;
+    transition: 0.3s;
+}
+.connect-bar{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1.3cm;
+    margin-right: 6cm;
+    color: var(--White);
+    font-family: ubuntu;
+    font-weight: 500;
+}
+#sign-up{
+    display: flex;
+    margin-top: -0.3cm;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1cm;
+    color: var(--Light-red);
+    background-color: var(--White);
+    width: 3cm;
+    height: 1cm;
+    border-radius: 1cm;
+    font-weight: 700;
+    transition: 0.3s;
+}
+.header-text{
+    display: flex;
+    margin-top: 3cm;
+    flex-direction: column;
+    text-align: center;
+    color: var(--White);
+}
+#title-header{
+    font-family: Overpass;
+    font-size: 2cm;
+}
+#desc-header{
+    color:hsl(40, 100%, 95%);
+    font-family: overpass;
+    font-size: 0.7cm;
+    margin-top: 0.3cm;
+}
+.button-header{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    margin-top: 1.5cm;
+    justify-content: space-around;
+    width: 8cm;
+}
+#start-button{
+    color: var(--Light-red);
+    background-color: var(--White);
+    font-family: ubuntu;
+    font-weight: 700;
+    width: 3.6cm;
+    height: 1.3cm;
+    border-radius: 1cm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+#learn-button{
+    color: var(--White);
+    font-family: ubuntu;
+    font-weight: 500;
+    width: 3.6cm;
+    height: 1.2cm;
+    border-radius: 1cm;
+    border: 1px solid var(--White);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+.first-container{
+    position: relative;
+    overflow: hidden;
+    height: 27cm;
+}
+#designed-title{
+    color: var(--Very-dark-blue);
+    font-size: 1.3cm;
+    font-family: overpass;
+    font-weight: 600;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 3cm;
+}
+.designed-desc{
+    display: flex;
+    flex-direction: row;
+    padding-top: 2cm;
+}
+#introducing{
+    margin-top: 6cm;
+    margin-left: 6cm;
+}
+#introducing-title{
+    color: var(--Very-dark-blue);
+    font-size: 0.95cm;
+    font-weight: 600;
+    font-family: overpass;
+}
+#introducing-desc{
+    color: var(--Very-dark-grayish-blue);
+    margin-top: 0.5cm;
+    font-size: 0.58cm;
+    line-height: 0.8cm;
+    font-family: overpass;
+}
+#robust{
+    margin-top: 2cm;
+    margin-left: 6cm;
+}
+#robust-title{
+    color: var(--Very-dark-blue);
+    font-size: 0.95cm;
+    font-weight: 600;
+    font-family: overpass;
+}
+#robust-desc{
+    color: var(--Very-dark-grayish-blue);
+    margin-top: 0.5cm;
+    font-size: 0.58cm;
+    line-height: 0.8cm;
+    font-family: overpass;
+}
+#editor-desktop{
+    position: absolute;
+    top: 1cm;
+    left: 30cm;
+    width: 28cm;
+    height: 26cm;
+}
+.second-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2cm;
+    background: url(image/bg-pattern-circles.svg) -4cm -12cm, linear-gradient(0.25turn,hsl(237, 17%, 21%),hsl(237, 23%, 32%));
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 3cm;
+    border-top-right-radius: 3cm;
+    height: 11cm;
+    position: relative;
+}
+#phones{
+    position: absolute;
+    top: -1.5cm;
+    left: 5cm;
+}
+.art-infrastructure{
+    margin-left: 25cm;
+    color: var(--White);
+    font-family: overpass;
+}
+#art-infrastructure-title{
+    font-size: 1.2cm;
+}
+#art-infrastructure-text{
+    color: hsl(237, 45%, 91%);
+    margin-top: 0.5cm;
+    font-size: 0.56cm;
+    font-weight: 300;
+    line-height: 0.95cm;
+}
+.third-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    overflow: hidden;
+    position: relative;
+    margin-top: 3cm;
+    height: 25cm;
+}
+#laptop-desktop{
+    position: absolute;
+    width: 30cm;
+    left: -8.5cm;
+}
+.third-text{
+    margin-right:7.6cm ;
+}
+#free-open-text{
+    margin-top: 6.5cm;
+}
+#free-open-title{
+    color: var(--Very-dark-blue);
+    font-size: 0.95cm;
+    font-weight: 600;
+    font-family: overpass;
+}
+#free-open-desc{
+    color: var(--Very-dark-grayish-blue);
+    margin-top: 0.5cm;
+    font-size: 0.58cm;
+    line-height: 0.8cm;
+    font-family: overpass;
+}
+#powerful-text{
+    margin-top: 2cm;
+}
+#powerful-title{
+    color: var(--Very-dark-blue);
+    font-size: 0.95cm;
+    font-weight: 600;
+    font-family: overpass;
+}
+#powerful-desc{
+    color: var(--Very-dark-grayish-blue);
+    margin-top: 0.5cm;
+    font-size: 0.58cm;
+    line-height: 0.8cm;
+    font-family: overpass;
+}
+.footer{
+    background-color: var(--Very-dark-black-blue);
+    margin-top: 2cm;
+    height: 10cm;
+    border-top-right-radius: 3cm;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+#logo-footer{
+    position: absolute;
+    left: 6cm;
+    top: 2cm;
+}
+#product-footer{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15cm;
+    margin-top: 2.2cm;
+}
+#product-footer-text{
+    color: var(--White);
+    font-size: 0.5cm;
+    font-family: overpass;
+    font-weight: 600;
+}
+#product-list{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.8cm;
+    color: var(--Grayish-blue);
+    font-size: 0.5cm;
+    font-family: overpass;
+    font-weight: 300;
+    line-height: 1cm;
+}
+#company-footer{
+    display: flex;
+    flex-direction: column;
+    margin-left: 6cm;
+    margin-top: 2.2cm;
+}
+#company-footer-text{
+    color: var(--White);
+    font-size: 0.5cm;
+    font-family: overpass;
+    font-weight: 600;
+}
+#company-list{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.8cm;
+    color: var(--Grayish-blue);
+    font-size: 0.5cm;
+    font-family: overpass;
+    font-weight: 300;
+    line-height: 1cm;
+}
+#connect-footer{
+    display: flex;
+    flex-direction: column;
+    margin-left: 6cm;
+    margin-top: 2.2cm;
+}
+#connect-footer-text{
+    color: var(--White);
+    font-size: 0.5cm;
+    font-family: overpass;
+    font-weight: 600;
+}
+#connect-list{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.8cm;
+    color: var(--Grayish-blue);
+    font-size: 0.5cm;
+    font-family: overpass;
+    font-weight: 300;
+    line-height: 1cm;
+}
+#hamburger{
+    display:none;
+}
+#close{
+    display: none;
+}
+.br2{
+    display: none;
+}
+.br1{
+    display: flex;
+}
+#editor-mobile{
+    display: none;
+}
+#laptop-mobile{
+    display: none;
+}
+.menu-mobile{
+    display: none;
+}
+ /* MENU APPEAR  */
+#product-menu{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    left: 9.3cm;
+    top: 2.6cm;
+    background-color: var(--White);
+    color: var(--Very-dark-blue);
+    font-family: overpass;
+    height: 4.5cm;
+    width: 4cm;
+    font-size: 0.4cm;
+    border-radius: 0.1cm;
+    box-shadow: hsl(3, 51%, 58%) 0px 7px 29px 5px;
+    transition: all 0.3s;
+}
+#overview-menu{
+    margin-left: 0.5cm;
+}
+#pricing-menu{
+    margin-top: 0.3cm;
+    margin-left: 0.5cm;
+}
+#marketplace-menu{
+    margin-top: 0.3cm;
+    margin-left: 0.5cm;
+}
+#features-menu{
+    margin-top: 0.3cm;
+    margin-left: 0.5cm;
+}
+#integration-menu{
+    margin-top: 0.3cm;
+    margin-left: 0.5cm;
+}
+#company-menu{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    left: 12.5cm;
+    top: 2.6cm;
+    background-color: var(--White);
+    color: var(--Very-dark-blue);
+    font-family: overpass;
+    height: 3.5cm;
+    width: 4cm;
+    font-size: 0.4cm;
+    border-radius: 0.1cm;
+    box-shadow: hsl(3, 51%, 58%) 0px 7px 29px 5px;
+    transition: all 0.3s;
+}
+#about-menu{
+    margin-left: 0.5cm;
+}
+#team-menu{
+    margin-top: 0.3cm;
+    margin-left: 0.5cm;
+}
+#blog-menu{
+    margin-top: 0.3cm;
+    margin-left: 0.5cm;
+}
+#careers-menu{
+    margin-top: 0.3cm;
+    margin-left: 0.5cm;
+}
+#connect-menu{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    left: 16.2cm;
+    top: 2.6cm;
+    background-color: var(--White);
+    color: var(--Very-dark-blue);
+    font-family: overpass;
+    height: 3.5cm;
+    width: 4cm;
+    font-size: 0.4cm;
+    border-radius: 0.1cm;
+    box-shadow: hsl(3, 51%, 58%) 0px 7px 29px 5px;
+    transition: all 0.3s;
+}
+#contact-menu{
+    margin-left: 0.5cm;
+}
+#newsletter-menu{
+    margin-top: 0.3cm;
+    margin-left: 0.5cm;
+}
+#linkedin-menu{
+    margin-top: 0.3cm;
+    margin-left: 0.5cm;
+}
+/* HOVER TEXT/BUTTON*/
+
+#product:hover{
+    cursor: pointer;
+}
+#product:hover::after{
+    width: 1.6cm;
+}
+#company:hover{
+    cursor: pointer;
+}
+#company:hover::after{
+    width: 1.8cm;
+}
+#connect:hover{
+    cursor: pointer;
+}
+#connect:hover::after{
+    width: 1.65cm;
+}
+#sign-up:hover{
+    cursor: pointer;
+    background-color: hsl(355, 100%, 74%);
+    color: var(--White);
+}
+#login:hover{
+    cursor: pointer;
+}
+#start-button:hover{
+    cursor: pointer;
+    background-color: hsl(355, 100%, 74%);
+    color: var(--White);
+}
+#learn-button:hover{
+    cursor: pointer;
+    background-color: var(--White);
+    color: var(--Light-red);
+}
+#overview-footer:hover{
+    cursor: pointer;
+    text-decoration: underline 2px;
+}
+#pricing-footer:hover{
+    cursor: pointer;
+    text-decoration: underline 2px;
+}
+#marketplace-footer:hover{
+    cursor: pointer;
+    text-decoration: underline 2px;
+}
+#features-footer:hover{
+    cursor: pointer;
+    text-decoration: underline 2px;
+}
+#integration-footer:hover{
+    cursor: pointer;
+    text-decoration: underline 2px;
+}
+#about-footer:hover{
+    cursor: pointer;
+    text-decoration: underline 2px;
+}
+#team-footer:hover{
+    cursor: pointer;
+    text-decoration: underline 2px;
+}
+#blog-footer:hover{
+    cursor: pointer;
+    text-decoration: underline 2px;
+}
+#careers-footer:hover{
+    cursor: pointer;
+    text-decoration: underline 2px;
+}
+#contact-footer:hover{
+    cursor: pointer;
+    text-decoration: underline 2px;
+}
+#newsletter-footer:hover{
+    cursor: pointer;
+    text-decoration: underline 2px;
+}
+#linkedin-footer:hover{
+    cursor: pointer;
+    text-decoration: underline 2px;
+}
+#contact-menu:hover{
+    cursor: pointer;
+    font-weight: 600;
+    color: black;
+}
+#newsletter-menu:hover{
+    cursor: pointer;
+    font-weight: 600;
+    color: black;
+}
+#linkedin-menu:hover{
+    cursor: pointer;
+    font-weight: 600;
+    color: black;
+}
+#about-menu:hover{
+    cursor: pointer;
+    font-weight: 600;
+    color: black;
+}
+#team-menu:hover{
+    cursor: pointer;
+    font-weight: 600;
+    color: black;
+}
+#blog-menu:hover{
+    cursor: pointer;
+    font-weight: 600;
+    color: black;
+}
+#careers-menu:hover{
+    cursor: pointer;
+    font-weight: 600;
+    color: black;
+}
+#overview-menu:hover{
+    cursor: pointer;
+    font-weight: 600;
+    color: black;
+}
+#pricing-menu:hover{
+    cursor: pointer;
+    font-weight: 600;
+    color: black;
+}
+#marketplace-menu:hover{
+    cursor: pointer;
+    font-weight: 600;
+    color: black;
+}
+#features-menu:hover{
+    cursor: pointer;
+    font-weight: 600;
+    color: black;
+}
+#integration-menu:hover{
+    cursor: pointer;
+    font-weight: 600;
+    color: black;
+}
+@media screen and (max-width: 625px) {
+    .br2{
+        display: flex;
+    }
+    .br1{
+        display: none;
+    }
+    .header-container{
+        background: url(image/bg-pattern-intro-mobile.svg) -9cm -7.5cm, linear-gradient(to bottom,hsl(13, 100%, 72%),hsl(353, 100%, 62%));
+        height: 15cm;
+        border-bottom-left-radius: 2cm;
+        position: relative;
+    }
+    .menu-mobile{
+        display: none;
+        flex-direction: column;
+        background-color: var(--White);
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 10px;
+        border-radius: 0.2cm;
+        width: 9cm;
+        height: 10.5cm;
+        text-align: center;
+        align-items: center;
+        top: 2.5cm;
+        left: 50%;
+        transform: translate(-50%);
+        position: absolute;
+        transition: 0.3s;
+    }
+    #product-mobile{
+        color: var(--Very-dark-blue);
+        font-family: overpass;
+        font-weight: 600;
+        font-size: 0.5cm;
+        margin-top: 1cm;
+    }
+    #arrow-product-mobile{
+        margin-left: 0.2cm;
+        transition: 0.3s;
+    }
+    #product-menu-mobile{
+        display: none;
+        flex-direction: column;
+        background-color: hsl(240, 7%, 94%);
+        margin-top: 0.5cm;
+        height: 6cm;
+        width: 8cm;
+        border-radius: 0.1cm;
+    }
+    #overview-menu-mobile{
+        color: hsl(209, 9%, 45%);
+        font-family: overpass;
+        font-weight: 600;
+        font-size: 0.45cm;
+        margin-top: 0.5cm;
+    }
+    #pricing-menu-mobile{
+        color: hsl(209, 9%, 45%);
+        font-family: overpass;
+        font-weight: 600;
+        font-size: 0.45cm;
+        margin-top: 0.5cm;
+    }
+    #marketplace-menu-mobile{
+        color: hsl(209, 9%, 45%);
+        font-family: overpass;
+        font-weight: 600;
+        font-size: 0.45cm;
+        margin-top: 0.5cm;
+    }
+    #features-menu-mobile{
+        color: hsl(209, 9%, 45%);
+        font-family: overpass;
+        font-weight: 600;
+        font-size: 0.45cm;
+        margin-top: 0.5cm;
+    }
+    #integrations-menu-mobile{
+        color: hsl(209, 9%, 45%);
+        font-family: overpass;
+        font-weight: 600;
+        font-size: 0.45cm;
+        margin-top: 0.5cm;
+    }
+    #company-mobile{
+        color: var(--Very-dark-blue);
+        font-family: overpass;
+        font-weight: 600;
+        font-size: 0.5cm;
+        margin-top: 1cm;
+    }
+    #arrow-company-mobile{
+        margin-left: 0.2cm;
+        transition: 0.3s;
+    }
+    #company-menu-mobile{
+        display: none;
+        flex-direction: column;
+        background-color: hsl(240, 7%, 94%);
+        margin-top: 0.5cm;
+        height: 5cm;
+        width: 8cm;
+        border-radius: 0.1cm;
+    }
+    #about-menu-mobile{
+        color: hsl(209, 9%, 45%);
+        font-family: overpass;
+        font-weight: 600;
+        font-size: 0.45cm;
+        margin-top: 0.5cm;
+    }
+    #team-menu-mobile{
+        color: hsl(209, 9%, 45%);
+        font-family: overpass;
+        font-weight: 600;
+        font-size: 0.45cm;
+        margin-top: 0.5cm;
+    }
+    #blog-menu-mobile{
+        color: hsl(209, 9%, 45%);
+        font-family: overpass;
+        font-weight: 600;
+        font-size: 0.45cm;
+        margin-top: 0.5cm;
+    }
+    #careers-menu-mobile{
+        color: hsl(209, 9%, 45%);
+        font-family: overpass;
+        font-weight: 600;
+        font-size: 0.45cm;
+        margin-top: 0.5cm;
+    }
+    #connect-mobile{
+        color: var(--Very-dark-blue);
+        font-family: overpass;
+        font-weight: 600;
+        font-size: 0.5cm;
+        margin-top: 1cm;
+    }
+    #arrow-connect-mobile{
+        margin-left: 0.2cm;
+        transition: 0.3s;
+    }
+    #connect-menu-mobile{
+        display: none;
+        flex-direction: column;
+        background-color: hsl(240, 7%, 94%);
+        margin-top: 0.5cm;
+        height: 3.8cm;
+        width: 8cm;
+        border-radius: 0.1cm;
+    }
+    #contact-menu-mobile{
+        color: hsl(209, 9%, 45%);
+        font-family: overpass;
+        font-weight: 600;
+        font-size: 0.45cm;
+        margin-top: 0.5cm;
+    }
+    #newsletter-menu-mobile{
+        color: hsl(209, 9%, 45%);
+        font-family: overpass;
+        font-weight: 600;
+        font-size: 0.45cm;
+        margin-top: 0.5cm;
+    }
+    #linkedin-menu-mobile{
+        color: hsl(209, 9%, 45%);
+        font-family: overpass;
+        font-weight: 600;
+        font-size: 0.45cm;
+        margin-top: 0.5cm;
+    }
+    #connect-bar-mobile{
+        margin-top: 0.7cm;
+        border-top: solid 1px hsl(0, 0%, 90%);
+        width: 8cm;
+    }
+    #login-mobile{
+        color: var(--Very-dark-blue);
+        font-family: overpass;
+        font-weight: 600;
+        font-size: 0.5cm;
+        margin-top: 0.8cm;
+    }
+    #sign-up-mobile{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--White);
+        background: linear-gradient(to right,hsl(13, 100%, 72%),hsl(353, 100%, 62%));
+        font-family: overpass;
+        border-radius: 1cm;
+        width: 4cm;
+        height: 1.4cm;
+        font-weight: 600;
+        font-size: 0.5cm;
+        margin-left: 50%;
+        transform: translate(-50%);
+        margin-top: 0.8cm;
+    }
+    .header-bar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .menu-bar{
+        display: flex;
+        flex-direction: row;
+        margin-left: 1cm;
+        margin-top: 1cm;
+        color: var(--White);
+        font-family: Ubuntu;
+        font-weight: 500;
+        position: relative;
+    }
+    #hamburger{
+        display: flex;
+        height: 50%;
+        margin-left: 6cm;
+        margin-top: 0.1cm;
+    }
+    #close{
+        display: none;
+        position: absolute;
+        left: 8.2cm;
+    }
+    #logo-header{
+        height: 70%;
+    }
+    #product{
+        display: none;
+    }
+    #company{
+        display: none;
+    }
+    #connect{
+        display: none;
+    }
+    .connect-bar{
+        display: none;
+    }
+    #sign-up{
+        display: none;
+    }
+    .header-text{
+        margin-top: 2cm;
+    }
+    #title-header{
+        font-size: 1cm;
+    }
+    #desc-header{
+        font-size: 0.55cm;
+    }
+    .first-container{
+        position: relative;
+        overflow: hidden;
+        height: 33cm;
+    }
+    #designed-title{
+        font-size: 0.8cm;
+        left: 10%;
+        transform: translateX(0%);
+        top: 2cm;
+    }
+    .designed-desc{
+        flex-direction: column;
+        text-align: center;
+    }
+    #introducing{
+        margin-top: 1cm;
+        margin-left: 0cm;
+    }
+    #introducing-title{
+        font-size: 0.8cm;
+    }
+    #introducing-desc{
+        font-size: 0.5cm;
+    }
+    #robust{
+        margin-top: 1cm;
+        margin-left: 0cm;
+    }
+    #robust-title{
+        font-size: 0.8cm;
+    }
+    #robust-desc{
+        font-size: 0.5cm;
+    }
+    #editor-desktop{
+        display: none;
+    }
+    #editor-mobile{
+        display: flex;
+        margin-top: 2cm;
+    }
+    .second-container{
+        display: flex;
+        flex-direction: column;
+        align-items: none;
+        text-align: center;
+        margin-top: 6cm;
+        background: url(image/bg-pattern-circles.svg) -8cm -13cm, linear-gradient(0.25turn,hsl(237, 17%, 21%),hsl(237, 23%, 32%));
+        background-repeat: no-repeat;
+        height: 19cm;
+        position: relative;
+    }
+    #phones{
+        position: absolute;
+        height: 60%;
+        top: -5cm;
+        left: -0.1cm;
+    }
+    .art-infrastructure{
+        margin-left: 0cm;
+        margin-top: 7cm;
+    }
+    #art-infrastructure-title{
+        font-size: 1.1cm;
+    }
+    #art-infrastructure-text{
+        margin-top: 0.5cm;
+        font-size: 0.5cm;
+    }
+    .third-container{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: start;
+        overflow: hidden;
+        position: relative;
+        margin-top: 0cm;
+        height: 28cm;
+    }
+    #laptop-desktop{
+        display: none;
+    }
+    #laptop-mobile{
+        display: flex;
+        margin-top: 2cm;
+    }
+    .third-text{
+        margin-right:0cm ;
+    }
+    #free-open-text{
+        margin-top: 1cm;
+    }
+    #free-open-title{
+        font-size: 0.8cm;
+    }
+    #free-open-desc{
+        font-size: 0.5cm;
+    }
+    #powerful-text{
+        margin-top: 1.5cm;
+    }
+    #powerful-title{
+        font-size: 0.8cm;
+    }
+    #powerful-desc{
+        font-size: 0.5cm;
+    }
+    .footer{
+        margin-top: 3cm;
+        height: 26cm;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        text-align: center;
+        align-items: center;
+    }
+    #logo-footer{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 2cm;
+    }
+    #product-footer{
+        margin-left: 0cm;
+        margin-top: 5cm;
+    }
+    #company-footer{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0cm;
+        margin-top: 1.5cm;
+    }
+    #connect-footer{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0cm;
+        margin-top: 1.5cm;
+    }
+}
+
+
